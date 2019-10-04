@@ -1,0 +1,26 @@
+-- First import the dataset of csv format into our mongo collection using command(come ouside the mongo shell)
+
+
+mongoimport --db account --collection detailscustomer --ignoreBlanks --type csv --headerline --file details.csv
+
+
+
+
+
+
+
+--Type this Below command in Mongo shell
+
+var map=function() {emit (this.custid,this.balance); }
+
+var reduce =function(key,values) 
+{ return Array.sum(values); }
+
+db.detailscustomer.mapReduce
+( map,reduce, 
+    { out:"Result4",query : {type:"s"} });
+
+
+
+
+--Here detailscustomer is collection created in the account database.
