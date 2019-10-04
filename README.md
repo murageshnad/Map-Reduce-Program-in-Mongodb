@@ -6,7 +6,7 @@ Step 3: create account Database using command: use account
    then it is switched to the account database
 Step 4: open the New terminal do not go to mongo shell be local only type this command to import the csv file into your collection
 ->mongoimport --db account --collection detailscustomer --ignoreBlanks --type csv --headerline --file details.csv
- Here your detailscustomer
+ Here your detailscustomer is your coolection on the account database
  
  Step 5:Now to the mongo shell type show collections , it is show your collection that is imported then
  type the Map reduce that is there Command.txt file
